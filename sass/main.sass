@@ -1,0 +1,85 @@
+// 顏色變數
+
+$skin: #F8F6D3
+$green: #52DCB6
+$green-lake: #93DDD9
+$white-light: #F3F1F3
+$blue-light: #E2ECF1
+
+
+$cover-bg-color: $skin
+$nav-bg-color: $green
+$nav-word-color: white
+$nav-word-hover-word-color: black
+
+
+// 共用
+*
+  // border: 1px solid #38967E
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+
+.container
+  max-width: 1100px
+  margin: 0 auto
+
+ul
+  margin: 0
+  padding: 0
+
+li
+  list-style-type: none
+  float: left
+
+
+// 客製化
+
+.clearfix:after
+  content: ''
+  display: block
+  clear: both
+
+// header
+#header
+  .cover
+    padding: 180px 0
+    text-align: center
+    background-color: $cover-bg-color
+    .info
+      display: inline-block
+      h1
+        padding: 10px 0
+        font-size: 3.5em
+        
+  .nav
+    text-align: center
+    background-color: $nav-bg-color
+    font-size: 0
+    ul
+      display: inline-block
+      a
+        display: inline-block
+        padding: 20px 50px
+        text-decoration: none
+        transition: all .4s
+        font-size: 20px
+        color: $nav-word-color
+        letter-spacing: 2px
+        &:hover
+          transform: scale(1.5) rotate(-20deg)
+          color: $nav-word-hover-word-color
+          
+        
+
+
+      
+        
+
+    
+      
+        
+      
