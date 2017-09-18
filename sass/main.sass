@@ -1,18 +1,28 @@
-// 顏色變數
+// 基本顏色變數
 $skin: #F8F6D3
 $green: #52DCB6
 $green-lake: #8DD4D4
 $white-light: #F3F1F3
+$white: white
+$black: black
 
+// 功能顏色變數
+$cover-word-color: $white
 
-$cover-bg-color: $skin
 $nav-bg-color: $green
-$nav-word-color: white
-$nav-word-hover-word-color: black
+$nav-word-color: $white
+$nav-word-hover-word-color: $black
 $nav-li-hover-bg-color: $white-light
+
 $about-media-word-bg-color: $green-lake
-$about-media-word-color: white
+$about-media-word-color: $white
+
 $educations-list-li-border-color: $green
+
+$skills-col4-1-bg-color: $green-lake
+$skills-col4-2-bg-color: $skin
+$skills-col4-3-bg-color: $green
+$skills-col4-mark-bg-color: $white-light
 
 
 // mixin
@@ -31,6 +41,7 @@ $educations-list-li-border-color: $green
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
   box-sizing: border-box
+
 
 h1, h2, h3, h4, h5, h6
   margin: 0
@@ -64,12 +75,17 @@ img
   max-width: 1100px
   margin: 0 auto
 
+.col-4, .col-5, .col-7
+  float: left
+
+.col-4
+  width: 33.33333%
+
 .col-5
   width: 41.66667%
-  float: left
+
 .col-7
   width: 58.33333%
-  float: left
 
 #content > div
   padding: 80px 0
@@ -87,7 +103,14 @@ img
   .cover
     padding: 180px 0
     text-align: center
-    background-color: $cover-bg-color
+    background: rgba(166,220,222,1);
+    background: -moz-linear-gradient(left, rgba(166,220,222,1) 0%, rgba(214,234,235,1) 100%)
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(166,220,222,1)), color-stop(100%, rgba(214,234,235,1)))
+    background: -webkit-linear-gradient(left, rgba(166,220,222,1) 0%, rgba(214,234,235,1) 100%)
+    background: -o-linear-gradient(left, rgba(166,220,222,1) 0%, rgba(214,234,235,1) 100%)
+    background: -ms-linear-gradient(left, rgba(166,220,222,1) 0%, rgba(214,234,235,1) 100%)
+    background: linear-gradient(to right, rgba(166,220,222,1) 0%, rgba(214,234,235,1) 100%)
+    color: $cover-word-color
     .info
       display: inline-block
       h1
@@ -131,8 +154,9 @@ img
       .media
         padding-top: 40px
         ul
-          li + li
-            margin-left: 20px           
+          li
+            margin-right: 20px 
+            margin-bottom: 20px          
           a
             display: inline-block
             border-radius: 4px
@@ -155,16 +179,72 @@ img
         li
           float: none
           border-left: 20px solid $educations-list-li-border-color
-          padding: 10px
+          padding: 15px 10px
           margin-bottom: 10px
           &:nth-child(2n)
+            padding: 10px
             border: none
             text-align: right
             border-bottom: 1px solid $educations-list-li-border-color
-    
+
+  .skills
+    h2
+      text-align: center
+      margin-bottom: 100px
+    .row
+      position: relative
+      .col-4
+        width: calc((100% - 80px) / 3)
+        border-radius: 4px
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          z-index: 10
+          top: 0
+          left: 0
+          opacity: 0
+          width: 100%
+          height: 100%
+        &:hover
+          opacity: 1
+          
+          
+          background-color: black
+
+      .mark
+        width: 100px
+        height: 100px
+        border-radius: 50%
+        background-color: $skills-col4-mark-bg-color
+        margin-top: -50px
+        margin-left: 50%
+        transform: translateX(-50%)
+        font-size: 3em
+        text-align: center
+        line-height: 100px
+      p
+        padding: 20px 40px 10px 40px
+        
+    .col-4 + .col-4
+      margin-left: 40px
+    .col-4:first-child
+      background-color: $skills-col4-1-bg-color
+    .col-4:nth-child(2)
+      background-color: $skills-col4-2-bg-color
+    .col-4:last-child
+      background-color: $skills-col4-3-bg-color
+
+
+
+
+#footer
+  padding: 40px 0
+  background-color: $skin
+
 
 *
-  // border: 1px solid #38967E
+  border: 1px solid #38967E
    
       
 
