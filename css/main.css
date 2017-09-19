@@ -1,4 +1,4 @@
-* {
+*, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -9,6 +9,9 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   margin-bottom: 50px;
   font-size: 32px; }
+
+h3 {
+  font-size: 22px; }
 
 p {
   margin-top: 0;
@@ -71,7 +74,7 @@ img {
 
 #header .nav {
   text-align: center;
-  background-color: #52DCB6;
+  background-color: #7AD8B8;
   font-size: 0; }
   #header .nav ul {
     display: inline-block; }
@@ -124,50 +127,63 @@ img {
     margin: 0 auto; }
     #content .educations .list ul li {
       float: none;
-      border-left: 20px solid #52DCB6;
+      border-left: 20px solid #7AD8B8;
       padding: 15px 10px;
       margin-bottom: 10px; }
       #content .educations .list ul li:nth-child(2n) {
         padding: 10px;
         border: none;
         text-align: right;
-        border-bottom: 1px solid #52DCB6; }
+        border-bottom: 1px solid #7AD8B8; }
 
 #content .skills h2 {
   text-align: center;
   margin-bottom: 100px; }
 
-#content .skills .row {
-  position: relative; }
-  #content .skills .row .col-4 {
-    width: calc((100% - 80px) / 3);
-    border-radius: 4px; }
-    #content .skills .row .col-4:after {
-      content: '';
-      display: block;
-      position: absolute;
-      z-index: 10;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      width: 100%;
-      height: 100%; }
-    #content .skills .row .col-4:hover {
-      opacity: 1;
-      background-color: black; }
-  #content .skills .row .mark {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #F3F1F3;
-    margin-top: -50px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    font-size: 3em;
-    text-align: center;
-    line-height: 100px; }
-  #content .skills .row p {
-    padding: 20px 40px 10px 40px; }
+#content .skills .row .col-4 {
+  width: calc((100% - 80px) / 3);
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  #content .skills .row .col-4:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 90%;
+    height: 95%;
+    opacity: 0;
+    transition: all .4s;
+    border: 10px solid white; }
+  #content .skills .row .col-4:hover:after {
+    opacity: 1; }
+
+#content .skills .row .mark {
+  position: relative;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #F3F1F3;
+  margin-top: -50px;
+  font-size: 3em;
+  text-align: center;
+  line-height: 100px; }
+
+#content .skills .row ul, #content .skills .row h3 {
+  padding: 20px 50px 20px 50px; }
+
+#content .skills .row li {
+  float: none;
+  border-bottom: 1px solid #969696;
+  margin-bottom: 20px;
+  line-height: 2; }
 
 #content .skills .col-4 + .col-4 {
   margin-left: 40px; }
@@ -179,11 +195,8 @@ img {
   background-color: #F8F6D3; }
 
 #content .skills .col-4:last-child {
-  background-color: #52DCB6; }
+  background-color: #7AD8B8; }
 
 #footer {
   padding: 40px 0;
   background-color: #F8F6D3; }
-
-* {
-  border: 1px solid #38967E; }

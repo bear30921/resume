@@ -1,10 +1,12 @@
 // 基本顏色變數
 $skin: #F8F6D3
-$green: #52DCB6
+$green:  #7AD8B8
 $green-lake: #8DD4D4
 $white-light: #F3F1F3
 $white: white
 $black: black
+
+
 
 // 功能顏色變數
 $cover-word-color: $white
@@ -23,6 +25,7 @@ $skills-col4-1-bg-color: $green-lake
 $skills-col4-2-bg-color: $skin
 $skills-col4-3-bg-color: $green
 $skills-col4-mark-bg-color: $white-light
+$skills-col4-border-color: $white
 
 
 // mixin
@@ -36,7 +39,7 @@ $skills-col4-mark-bg-color: $white-light
 
 
 // 共用
-*
+*, *:before, *:after
   // border: 1px solid #38967E
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
@@ -49,6 +52,9 @@ h1, h2, h3, h4, h5, h6
 h2
   margin-bottom: 50px
   font-size: 32px
+
+h3
+  font-size: 22px
 
 p
   margin-top: 0
@@ -103,7 +109,7 @@ img
   .cover
     padding: 180px 0
     text-align: center
-    background: rgba(166,220,222,1);
+    background: rgba(166,220,222,1)
     background: -moz-linear-gradient(left, rgba(166,220,222,1) 0%, rgba(214,234,235,1) 100%)
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(166,220,222,1)), color-stop(100%, rgba(214,234,235,1)))
     background: -webkit-linear-gradient(left, rgba(166,220,222,1) 0%, rgba(214,234,235,1) 100%)
@@ -192,39 +198,50 @@ img
       text-align: center
       margin-bottom: 100px
     .row
-      position: relative
       .col-4
         width: calc((100% - 80px) / 3)
         border-radius: 4px
+        position: relative
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
         &:after
           content: ''
           display: block
           position: absolute
-          z-index: 10
+          z-index: 0
           top: 0
+          right: 0
+          bottom: 0
           left: 0
+          margin: auto
+          width: 90%
+          height: 95%
           opacity: 0
-          width: 100%
-          height: 100%
+          // background-color: black
+          transition: all .4s
+          border: 10px solid $skills-col4-border-color
         &:hover
-          opacity: 1
-          
-          
-          background-color: black
+          &:after
+            opacity: 1
 
       .mark
+        position: relative
+        z-index: 1
         width: 100px
         height: 100px
+        margin: 0 auto
         border-radius: 50%
         background-color: $skills-col4-mark-bg-color
         margin-top: -50px
-        margin-left: 50%
-        transform: translateX(-50%)
         font-size: 3em
         text-align: center
         line-height: 100px
-      p
-        padding: 20px 40px 10px 40px
+      ul, h3
+        padding: 20px 50px 20px 50px
+      li
+        float: none
+        border-bottom: 1px solid #969696
+        margin-bottom: 20px
+        line-height: 2
         
     .col-4 + .col-4
       margin-left: 40px
@@ -244,7 +261,8 @@ img
 
 
 *
-  border: 1px solid #38967E
+
+  // border: 1px solid #38967E
    
       
 
