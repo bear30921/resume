@@ -35,6 +35,10 @@ $experiences-needle-bg-color: $green
 $experiences-needle-word-color: $white
 $experiences-needle-word2-color: $black-light
 
+$footer-bg-color: $skin
+
+$top-bg-color: $green-lake
+
 
 
 // mixin
@@ -354,18 +358,62 @@ img
 
         &:nth-child(2n+1) .row
           float: right
-        
-        
+
+  .projects
+    h2
+      text-align: center
+    .row
+      margin-bottom: 40px
+      .col-5
+        a
+          display: block
+          img
+            width: 100%
+      .col-7
+        padding-left: 40px
+      &:last-child
+        .col-5
+          position: relative
+          left: 58.33333%
+        .col-7
+          position: relative
+          right: 41.66667%
+          padding-left: 0
+          padding-right: 40px
+
+  .autobiography
+    border-top: 1px solid #C1C3C7
+    h2
+      text-align: center    
+    p
+      line-height: 1.8
 
 
 
 #footer
-  padding: 40px 0
-  background-color: $skin
+  padding: 50px 0
+  background-color: $footer-bg-color
+  p
+    margin: 0
+    text-align: center
+
+#top
+  display: inline-block
+  padding: 20px 15px
+  border-radius: 50%
+  font-size: 1.4em
+  color: white
+  background-color: $top-bg-color
+  position: fixed
+  right: 20px
+  bottom: 40px
+
+
+  
+  
 
 
 *
-
   // border: 1px solid #38967E
    
       

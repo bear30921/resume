@@ -284,6 +284,47 @@ img {
       #content .experiences .area .experience:nth-child(2n+1) .row {
         float: right; }
 
+#content .projects h2 {
+  text-align: center; }
+
+#content .projects .row {
+  margin-bottom: 40px; }
+  #content .projects .row .col-5 a {
+    display: block; }
+    #content .projects .row .col-5 a img {
+      width: 100%; }
+  #content .projects .row .col-7 {
+    padding-left: 40px; }
+  #content .projects .row:last-child .col-5 {
+    position: relative;
+    left: 58.33333%; }
+  #content .projects .row:last-child .col-7 {
+    position: relative;
+    right: 41.66667%;
+    padding-left: 0;
+    padding-right: 40px; }
+
+#content .autobiography {
+  border-top: 1px solid #C1C3C7; }
+  #content .autobiography h2 {
+    text-align: center; }
+  #content .autobiography p {
+    line-height: 1.8; }
+
 #footer {
-  padding: 40px 0;
+  padding: 50px 0;
   background-color: #F8F6D3; }
+  #footer p {
+    margin: 0;
+    text-align: center; }
+
+#top {
+  display: inline-block;
+  padding: 20px 15px;
+  border-radius: 50%;
+  font-size: 1.4em;
+  color: white;
+  background-color: #8DD4D4;
+  position: fixed;
+  right: 20px;
+  bottom: 40px; }
