@@ -57,8 +57,12 @@ $top-bg-color: $green-lake
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
   box-sizing: border-box
+  word-break: break-all
 
+html, body 
+  overflow-x: hidden
 
+  
 h1, h2, h3, h4, h5, h6
   margin: 0
 
@@ -93,6 +97,7 @@ img
 .container
   max-width: 1100px
   margin: 0 auto
+  padding: 0 40px
 
 .col-4, .col-5, .col-7
   float: left
@@ -149,7 +154,7 @@ img
         display: inline-block
         padding: 20px 50px
         text-decoration: none
-        transition: all .4s
+        transition:  color .4s ease, transform .4s ease
         font-size: 20px
         color: $nav-word-color
         letter-spacing: 2px
@@ -253,7 +258,7 @@ img
         text-align: center
         line-height: 100px
       ul, h3
-        padding: 20px 50px 20px 50px
+        padding: 20px 40px 20px 40px
       li
         float: none
         border-bottom: 1px solid $border-color
@@ -347,6 +352,7 @@ img
           .col-5
             img
               width: 100%
+              height: auto
           .col-7
             padding-left: 20px
         &:nth-child(2n) .row:before
@@ -369,6 +375,7 @@ img
           display: block
           img
             width: 100%
+            height: auto
       .col-7
         padding-left: 40px
       &:last-child
@@ -414,7 +421,7 @@ img
 
 
 *
-  // border: 1px solid #38967E
+  border: 1px solid #38967E
    
       
 

@@ -1,0 +1,9 @@
+@media screen and (max-width: 1100px) {
+  .container {
+    max-width: 900px; }
+  #header .nav ul a {
+    padding: 20px 40px; } }
+
+@media screen and (max-width: 900px) {
+  #header .nav ul a {
+    padding: 20px 30px; } }
