@@ -8,7 +8,7 @@ $black-light: #969696
 
 
 
-// 功能顏色變數
+// 桌機功能顏色變數
 $border-color: $black-light
 
 $cover-word-color: $white
@@ -38,9 +38,24 @@ $footer-bg-color: $skin
 
 $top-bg-color: $green-lake
 
-@media screen and (max-width: 1100px)
-  .container
-    max-width: 900px
+//平板、手機 變數
+$sideBar-bg-color: $green
+$sideBar-menu-bg-color: $green
+$sideBar-menu-hamburger-color: $white
+
+// mixin
+@mixin absolute-center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+
+
+
+@media screen and (max-width: 991px)
+  // .container
+  //   max-width: 900px
 
   #header
     .nav
@@ -48,7 +63,9 @@ $top-bg-color: $green-lake
         a
           padding: 20px 40px
 
-@media screen and (max-width: 900px)
+
+
+@media screen and (max-width: 862px)
   // .container
   //   max-width: 700px
 
@@ -57,6 +74,120 @@ $top-bg-color: $green-lake
       ul
         a
           padding: 20px 30px
-// @media screen and (max-width: 768px)
+
+
+
+@media screen and (max-width: 767px)
+  // .container
+  //   max-width: 700px
+
+  #header
+    .side-bar
+      display: block
+      background-color: $sideBar-bg-color
+      position: fixed
+      z-index: 500
+      width: 100%
+
+      .menu
+        width: 80px
+        height: 60px
+        float: right
+        border: 2px solid $white
+        background-color: $sideBar-menu-bg-color
+        position: relative
+        z-index: 502
+        margin: 10px
+        &:before, &:after
+          content: ''
+          display: block
+          width: 50px
+          height: 4px
+          background-color: $sideBar-menu-hamburger-color
+        &:before, &:after, .hamburger
+          margin: 11.5px auto
+        .hamburger
+          width: 50px
+          height: 4px
+          background-color: $sideBar-menu-hamburger-color
+        &.active:before, &.active:after
+          position: absolute
+          top: 50%
+          left: 50%
+          margin: 0
+        &.active:before
+          transform: translate(-50%, -50%) rotate(45deg)
+        &.active:after
+          transform: translate(-50%, -50%) rotate(-45deg)
+        &.active .hamburger
+          opacity: 0
+          margin: 0
+      .menu-list
+        display: none
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 501px
+        width: 100%
+        height: 100%
+        background-color: $skin
+        ul
+          +absolute-center
+          text-align: center
+          font-size: 16px
+          li
+            float: none
+            a
+              display: inline-block
+              padding: 20px 50px
+              font-size: 32px
+              letter-spacing: 2px
+      .menu-list.active
+        display: block
+    .nav
+      display: none
+
+
+  #content
+    .about
+      
+      .col-5
+        width: 100%
+        margin-bottom: 40px
+        img
+      .col-7
+        width: 100%
+        .media
+          text-align: center
+          ul
+            display: inline-block
+            vertical-align: top
+            li
+              margin: 0
+              padding: 0 10px
+
+    .skills
+      h2
+      .row
+        .col-4
+          width: 100%
+          margin-left: 0
+          text-align: center
+          &:nth-child(1), &:nth-child(2)
+            margin-bottom: 90px
+
+  
+
+*, *:before, *:after
+
+  // border: 1px solid #38967E
+
+
+// 超大螢幕1200px
+// 大螢幕 992px ~ 1199px
+// 平板 768px ~ 991px
+// 超大尺寸手機 576px ~ 767px
+// 大尺寸手機 481px ~ 575px
+// 一般手機 ~ 480px（這裏想提一下，有時候我會再額外有 414px ~ 480px <-- iPhone Plus）
   
           

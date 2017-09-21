@@ -1,9 +1,94 @@
-@media screen and (max-width: 1100px) {
-  .container {
-    max-width: 900px; }
+@media screen and (max-width: 991px) {
   #header .nav ul a {
     padding: 20px 40px; } }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 862px) {
   #header .nav ul a {
     padding: 20px 30px; } }
+
+@media screen and (max-width: 767px) {
+  #header .side-bar {
+    display: block;
+    background-color: #7AD8B8;
+    position: fixed;
+    z-index: 500;
+    width: 100%; }
+    #header .side-bar .menu {
+      width: 80px;
+      height: 60px;
+      float: right;
+      border: 2px solid white;
+      background-color: #7AD8B8;
+      position: relative;
+      z-index: 502;
+      margin: 10px; }
+      #header .side-bar .menu:before, #header .side-bar .menu:after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 4px;
+        background-color: white; }
+      #header .side-bar .menu:before, #header .side-bar .menu:after, #header .side-bar .menu .hamburger {
+        margin: 11.5px auto; }
+      #header .side-bar .menu .hamburger {
+        width: 50px;
+        height: 4px;
+        background-color: white; }
+      #header .side-bar .menu.active:before, #header .side-bar .menu.active:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0; }
+      #header .side-bar .menu.active:before {
+        transform: translate(-50%, -50%) rotate(45deg); }
+      #header .side-bar .menu.active:after {
+        transform: translate(-50%, -50%) rotate(-45deg); }
+      #header .side-bar .menu.active .hamburger {
+        opacity: 0;
+        margin: 0; }
+    #header .side-bar .menu-list {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 501px;
+      width: 100%;
+      height: 100%;
+      background-color: #F8F6D3; }
+      #header .side-bar .menu-list ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 16px; }
+        #header .side-bar .menu-list ul li {
+          float: none; }
+          #header .side-bar .menu-list ul li a {
+            display: inline-block;
+            padding: 20px 50px;
+            font-size: 32px;
+            letter-spacing: 2px; }
+    #header .side-bar .menu-list.active {
+      display: block; }
+  #header .nav {
+    display: none; }
+  #content .about .col-5 {
+    width: 100%;
+    margin-bottom: 40px; }
+  #content .about .col-7 {
+    width: 100%; }
+    #content .about .col-7 .media {
+      text-align: center; }
+      #content .about .col-7 .media ul {
+        display: inline-block;
+        vertical-align: top; }
+        #content .about .col-7 .media ul li {
+          margin: 0;
+          padding: 0 10px; }
+  #content .skills .row .col-4 {
+    width: 100%;
+    margin-left: 0;
+    text-align: center; }
+    #content .skills .row .col-4:nth-child(1), #content .skills .row .col-4:nth-child(2) {
+      margin-bottom: 90px; } }

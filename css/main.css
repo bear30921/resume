@@ -22,7 +22,8 @@ p {
   letter-spacing: 1px; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: black; }
 
 ul {
   margin: 0;
@@ -59,6 +60,9 @@ img {
   content: '';
   display: block;
   clear: both; }
+
+#header .side-bar {
+  display: none; }
 
 #header .cover {
   padding: 180px 0;
@@ -237,8 +241,7 @@ img {
         transform: translateX(50%);
         right: calc(50% - 50px - 1px - 20px); }
         #content .experiences .area .experience:nth-child(2n) time:after {
-          content: none;
-          padding: none; }
+          content: none; }
         #content .experiences .area .experience:nth-child(2n) time:before {
           content: '-';
           padding: 0 10px; }
@@ -333,8 +336,5 @@ img {
   color: white;
   background-color: #8DD4D4;
   position: fixed;
-  right: 20px;
-  bottom: 40px; }
-
-* {
-  border: 1px solid #38967E; }
+  right: 12px;
+  bottom: 12px; }
