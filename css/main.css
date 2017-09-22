@@ -207,7 +207,9 @@ img {
   background-color: #7AD8B8; }
 
 #content .experiences {
-  background-color: #F3F1F3; }
+  background-color: #F3F1F3;
+  position: relative;
+  z-index: -100; }
   #content .experiences h2 {
     text-align: center; }
   #content .experiences .area {
@@ -219,7 +221,7 @@ img {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 0;
+      z-index: -1;
       width: 1px;
       height: 100%;
       background-color: #969696; }
@@ -232,14 +234,15 @@ img {
         top: 13px;
         left: calc(50% - 50px - 1px - 20px);
         transform: translateX(-50%);
-        color: #969696; }
+        color: #969696;
+        font-size: 14px; }
         #content .experiences .area .experience time:after {
           content: '-';
           padding: 0 10px; }
       #content .experiences .area .experience:nth-child(2n) time {
         left: auto;
-        transform: translateX(50%);
-        right: calc(50% - 50px - 1px - 20px); }
+        right: calc(50% - 50px - 1px - 20px);
+        transform: translateX(50%); }
         #content .experiences .area .experience:nth-child(2n) time:after {
           content: none; }
         #content .experiences .area .experience:nth-child(2n) time:before {
@@ -249,7 +252,7 @@ img {
         position: absolute;
         top: 0;
         left: 50%;
-        z-index: 1;
+        z-index: 2;
         transform: translateX(-50%);
         width: 50px;
         height: 50px;
@@ -263,7 +266,7 @@ img {
         box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.1); }
       #content .experiences .area .experience .row {
         width: calc(50% - 41px);
-        padding: 20px;
+        padding: 15px;
         background-color: white;
         border-radius: 4px;
         position: relative;

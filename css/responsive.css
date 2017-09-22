@@ -91,4 +91,67 @@
     margin-left: 0;
     text-align: center; }
     #content .skills .row .col-4:nth-child(1), #content .skills .row .col-4:nth-child(2) {
-      margin-bottom: 90px; } }
+      margin-bottom: 90px; }
+  #content .experiences .area:after {
+    left: calc(0% + 94px + 25px); }
+  #content .experiences .area .experience time {
+    transform: none;
+    left: 0; }
+  #content .experiences .area .experience:nth-child(2n) time {
+    left: 0;
+    right: auto;
+    transform: none; }
+    #content .experiences .area .experience:nth-child(2n) time:after {
+      content: '-';
+      padding: 0 10px; }
+    #content .experiences .area .experience:nth-child(2n) time:before {
+      content: none; }
+  #content .experiences .area .experience .needle {
+    left: calc(0% + 94px + 25px); }
+  #content .experiences .area .experience .row {
+    width: calc(100% - 94px - 50px - 12px);
+    left: calc(0% + 94px + 50px + 12px); }
+  #content .experiences .area .experience:nth-child(2n) .row:before {
+    left: -15px;
+    right: auto;
+    border-width: 10px 20px 10px 0;
+    border-color: transparent white transparent transparent; }
+  #content .experiences .area .experience:nth-child(2n+1) .row {
+    float: none; } }
+
+@media screen and (max-width: 575px) {
+  #content .experiences h2 {
+    margin-bottom: 100px; }
+  #content .experiences .area:after {
+    left: 50%; }
+  #content .experiences .area .experience {
+    margin-bottom: 120px; }
+    #content .experiences .area .experience:last-child {
+      margin-bottom: 0; }
+    #content .experiences .area .experience time {
+      background-color: #F3F1F3; }
+    #content .experiences .area .experience:nth-child(n) time {
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%); }
+      #content .experiences .area .experience:nth-child(n) time:after {
+        content: none; }
+    #content .experiences .area .experience .needle {
+      top: -30px;
+      left: 50%;
+      z-index: 11; }
+    #content .experiences .area .experience .row {
+      width: 100%;
+      left: auto;
+      z-index: 10; }
+      #content .experiences .area .experience .row:before {
+        display: none; }
+  #content .projects .row .col-5 {
+    margin-bottom: 20px; }
+  #content .projects .row:nth-child(n) .col-5 {
+    width: 100%;
+    left: auto; }
+  #content .projects .row:nth-child(n) .col-7 {
+    width: 100%;
+    right: auto;
+    padding: 0; } }

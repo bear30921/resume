@@ -280,6 +280,8 @@ img
 
   .experiences
     background-color: $experiences-bg-color
+    position: relative
+    z-index: -100
     h2
       text-align: center
     .area
@@ -288,7 +290,7 @@ img
         content: ''
         display: block
         +absolute-center
-        z-index: 0
+        z-index: -1
         width: 1px
         height: 100%
         background-color: $border-color
@@ -302,13 +304,14 @@ img
           left: calc(50% - 50px - 1px - 20px)
           transform: translateX(-50%) 
           color: $experiences-needle-word2-color
+          font-size: 14px
           &:after
             content: '-'
             padding: 0 10px
         &:nth-child(2n) time
           left: auto
-          transform: translateX(50%) 
           right: calc(50% - 50px - 1px - 20px)
+          transform: translateX(50%) 
           &:after
             content: none
           &:before
@@ -318,7 +321,7 @@ img
           position: absolute
           top: 0
           left: 50%
-          z-index: 1
+          z-index: 2
           transform: translateX(-50%)
           width: 50px
           height: 50px
@@ -332,7 +335,7 @@ img
           box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.1)
         .row
           width: calc(50% - 41px)
-          padding: 20px
+          padding: 15px
           background-color: white
           border-radius: 4px
           position: relative
@@ -362,8 +365,6 @@ img
           right: -15px
           border-width: 10px 0 10px 20px
           border-color: transparent transparent transparent white
-
-
         &:nth-child(2n+1) .row
           float: right
 
