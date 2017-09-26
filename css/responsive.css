@@ -1,3 +1,6 @@
+#header .side-bar.active {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
 @media screen and (max-width: 991px) {
   #header .nav ul a {
     padding: 20px 40px; } }
@@ -12,7 +15,8 @@
     background-color: #7AD8B8;
     position: fixed;
     z-index: 500;
-    width: 100%; }
+    width: 100%;
+    transition: all .4s; }
     #header .side-bar .menu {
       width: 80px;
       height: 60px;
@@ -121,7 +125,7 @@
 
 @media screen and (max-width: 575px) {
   #content .experiences h2 {
-    margin-bottom: 100px; }
+    margin-bottom: 110px; }
   #content .experiences .area:after {
     left: 50%; }
   #content .experiences .area .experience {
@@ -131,13 +135,13 @@
     #content .experiences .area .experience time {
       background-color: #F3F1F3; }
     #content .experiences .area .experience:nth-child(n) time {
-      top: -50px;
+      top: -60px;
       left: 50%;
       transform: translateX(-50%); }
       #content .experiences .area .experience:nth-child(n) time:after {
         content: none; }
     #content .experiences .area .experience .needle {
-      top: -30px;
+      top: -40px;
       left: 50%;
       z-index: 11; }
     #content .experiences .area .experience .row {

@@ -17,7 +17,7 @@ $cover-word-color: $white
 $nav-bg-color: $green
 $nav-word-color: $white
 $nav-word-hover-word-color: $black
-$nav-li-hover-bg-color: $white-light
+$nav-li-hover-bg-color: $skin
 
 $about-media-word-bg-color: $green-lake
 $about-media-word-color: $white
@@ -35,7 +35,8 @@ $experiences-needle-bg-color: $green
 $experiences-needle-word-color: $white
 $experiences-needle-word2-color: $black-light
 
-$footer-bg-color: $skin
+$footer-bg-color: $black-light
+$footer-word-color: $white
 
 $top-bg-color: $green-lake
 
@@ -122,6 +123,22 @@ img
   content: ''
   display: block
   clear: both
+
+
+#header .nav.active
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1000
+  width: 100%
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+  transition: all .4s
+
+#header.active:after
+  content: ''
+  display: block
+  height: 63px
+  
 
 // header
 #header
@@ -406,17 +423,25 @@ img
   p
     margin: 0
     text-align: center
+    a:hover
+      border-bottom: 2px solid $footer-word-color
+  p, a
+    color: $footer-word-color
 
 #top
   display: inline-block
+  opacity: 0
   padding: 20px 15px
   border-radius: 50%
   font-size: 1.4em
   color: white
   background-color: $top-bg-color
   position: fixed
-  right: 12px
+  right: -100px
   bottom: 12px
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+  transition: all 1s
+  
 
 
   

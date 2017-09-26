@@ -52,6 +52,11 @@ $sideBar-menu-hamburger-color: $white
   transform: translate(-50%, -50%)
 
 
+// 客製化
+#header .side-bar.active
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+
+
 
 
 @media screen and (max-width: 991px)
@@ -83,6 +88,8 @@ $sideBar-menu-hamburger-color: $white
       position: fixed
       z-index: 500
       width: 100%
+      transition: all .4s
+
 
       .menu
         width: 80px
@@ -213,7 +220,7 @@ $sideBar-menu-hamburger-color: $white
     
 
       h2
-        margin-bottom: 100px
+        margin-bottom: 110px
 
       .area
         &:after
@@ -226,14 +233,14 @@ $sideBar-menu-hamburger-color: $white
           time
             background-color: $experiences-line-bg-color
           &:nth-child(n) time
-            top: -50px
+            top: -60px
             left: 50%
             transform: translateX(-50%)
             &:after
               content: none
             
           .needle
-            top: -30px
+            top: -40px
             left: 50%
             z-index: 11
           .row
