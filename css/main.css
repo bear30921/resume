@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6,6 +7,9 @@
 
 html, body {
   overflow-x: hidden; }
+
+body {
+  font-family: Arial, 微軟正黑體, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0; }
