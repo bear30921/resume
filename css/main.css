@@ -12,7 +12,8 @@ body {
   font-family: Arial, 微軟正黑體, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0; }
+  margin: 0;
+  font-weight: 400; }
 
 h2 {
   margin-bottom: 50px;
@@ -72,7 +73,8 @@ img {
   z-index: 1000;
   width: 100%;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  transition: all .4s; }
+  transition: all .4s;
+  background-color: #81CCCF; }
 
 #header.active:after {
   content: '';
@@ -83,46 +85,64 @@ img {
   opacity: 1;
   right: 12px; }
 
-#header .side-bar {
-  display: none; }
-
-#header .cover {
-  padding: 180px 0;
-  text-align: center;
-  background: #a6dcde;
-  background: -moz-linear-gradient(left, #a6dcde 0%, #d6eaeb 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, #a6dcde), color-stop(100%, #d6eaeb));
-  background: -webkit-linear-gradient(left, #a6dcde 0%, #d6eaeb 100%);
-  background: -o-linear-gradient(left, #a6dcde 0%, #d6eaeb 100%);
-  background: -ms-linear-gradient(left, #a6dcde 0%, #d6eaeb 100%);
-  background: linear-gradient(to right, #a6dcde 0%, #d6eaeb 100%);
-  color: white; }
-  #header .cover .info {
-    display: inline-block; }
-    #header .cover .info h1 {
-      padding: 10px 0;
-      font-size: 3.5em; }
-
-#header .nav {
-  text-align: center;
-  background-color: #7AD8B8;
-  font-size: 0; }
-  #header .nav ul {
-    display: inline-block;
-    vertical-align: top; }
-    #header .nav ul li:hover {
-      background-color: #F8F6D3; }
-    #header .nav ul a {
+#header {
+  background-image: url(../img/computer2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  position: relative; }
+  #header:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #06b0c4;
+    /* Old Browsers */
+    background: -webkit-linear-gradient(top left, rgba(6, 176, 196, 0.7), rgba(199, 255, 226, 0.7));
+    /*Safari 5.1-6*/
+    background: -o-linear-gradient(top left, rgba(6, 176, 196, 0.7), rgba(199, 255, 226, 0.7));
+    /*Opera 11.1-12*/
+    background: -moz-linear-gradient(top left, rgba(6, 176, 196, 0.7), rgba(199, 255, 226, 0.7));
+    /*Fx 3.6-15*/
+    background: linear-gradient(top left, rgba(6, 176, 196, 0.7), rgba(199, 255, 226, 0.7));
+    /*Standard*/ }
+  #header .side-bar {
+    display: none; }
+  #header .cover {
+    padding: 180px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 3; }
+    #header .cover .info {
+      display: inline-block; }
+      #header .cover .info h1 {
+        padding: 10px 0;
+        font-size: 3.5em; }
+  #header .nav {
+    text-align: center;
+    font-size: 0;
+    position: relative;
+    z-index: 3; }
+    #header .nav ul {
       display: inline-block;
-      padding: 20px 50px;
-      text-decoration: none;
-      transition: color .4s ease, transform .4s ease;
-      font-size: 20px;
-      color: white;
-      letter-spacing: 2px; }
-      #header .nav ul a:hover {
-        transform: scale(1.3) rotate(-20deg);
-        color: black; }
+      vertical-align: top; }
+      #header .nav ul li:hover {
+        background-color: white; }
+      #header .nav ul a {
+        display: inline-block;
+        padding: 20px 50px;
+        text-decoration: none;
+        transition: color .4s ease, transform .4s ease;
+        font-size: 20px;
+        color: white;
+        letter-spacing: 2px; }
+        #header .nav ul a:hover {
+          transform: scale(1.3) rotate(-20deg);
+          color: #4A4A4A; }
 
 #content .about h2 {
   text-align: center; }
@@ -150,83 +170,82 @@ img {
     color: white;
     font-size: 32px; }
 
-#content .educations {
-  background-color: #F3F1F3; }
-  #content .educations h2 {
-    text-align: center; }
-  #content .educations .list ul {
-    width: 60%;
-    margin: 0 auto; }
-    #content .educations .list ul li {
-      float: none;
-      border-left: 20px solid #7AD8B8;
-      padding: 15px 10px;
-      margin-bottom: 10px; }
-      #content .educations .list ul li:nth-child(2n) {
-        padding: 10px;
-        border: none;
-        text-align: right;
-        border-bottom: 1px solid #7AD8B8; }
+#content .educations h2 {
+  text-align: center; }
 
-#content .skills h2 {
-  text-align: center;
-  margin-bottom: 100px; }
+#content .educations .list ul {
+  width: 60%;
+  margin: 0 auto; }
+  #content .educations .list ul li {
+    float: none;
+    border-left: 20px solid #7AD8B8;
+    padding: 15px 10px;
+    margin-bottom: 10px; }
+    #content .educations .list ul li:nth-child(2n) {
+      padding: 10px;
+      border: none;
+      text-align: right;
+      border-bottom: 1px solid #7AD8B8; }
 
-#content .skills .row .col-4 {
-  width: calc((100% - 80px) / 3);
-  border-radius: 4px;
-  position: relative; }
-  #content .skills .row .col-4:after {
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    width: 90%;
-    height: 95%;
-    opacity: 0;
-    transition: all .4s;
-    border: 10px solid white; }
-  #content .skills .row .col-4:hover:after {
-    opacity: 1; }
-
-#content .skills .row .mark {
-  position: relative;
-  z-index: 1;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background-color: #F3F1F3;
-  margin-top: -50px;
-  font-size: 3em;
-  text-align: center;
-  line-height: 100px; }
-
-#content .skills .row ul, #content .skills .row h3 {
-  padding: 20px 40px 20px 40px; }
-
-#content .skills .row li {
-  float: none;
-  border-bottom: 1px solid #969696;
-  margin-bottom: 20px;
-  line-height: 2; }
-
-#content .skills .col-4 + .col-4 {
-  margin-left: 40px; }
-
-#content .skills .col-4:first-child {
-  background-color: #8DD4D4; }
-
-#content .skills .col-4:nth-child(2) {
-  background-color: #F8F6D3; }
-
-#content .skills .col-4:last-child {
-  background-color: #7AD8B8; }
+#content .skills {
+  background: #06b0c4;
+  /* Old Browsers */
+  background: -webkit-linear-gradient(top left, rgba(6, 176, 196, 0.7), rgba(199, 255, 226, 0.7));
+  /*Safari 5.1-6*/
+  background: -o-linear-gradient(top left, rgba(6, 176, 196, 0.7), rgba(199, 255, 226, 0.7));
+  /*Opera 11.1-12*/
+  background: -moz-linear-gradient(top left, rgba(6, 176, 196, 0.7), rgba(199, 255, 226, 0.7));
+  /*Fx 3.6-15*/
+  background: linear-gradient(top left, rgba(6, 176, 196, 0.7), rgba(199, 255, 226, 0.7));
+  /*Standard*/ }
+  #content .skills h2 {
+    text-align: center;
+    margin-bottom: 100px;
+    color: white; }
+  #content .skills .row .col-4 {
+    width: calc((100% - 80px) / 3);
+    border-radius: 4px;
+    position: relative;
+    border: 1px solid white;
+    color: #4A4A4A; }
+    #content .skills .row .col-4:after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 90%;
+      height: 95%;
+      opacity: 0;
+      transition: all .4s;
+      border: 1px solid white; }
+    #content .skills .row .col-4:hover:after {
+      opacity: 1; }
+  #content .skills .row .mark {
+    position: relative;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #F3F1F3;
+    margin-top: -50px;
+    font-size: 2.8em;
+    text-align: center;
+    line-height: 80px; }
+  #content .skills .row ul, #content .skills .row h3 {
+    padding: 20px 40px 20px 40px; }
+  #content .skills .row li {
+    float: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+    line-height: 2; }
+  #content .skills .col-4 + .col-4 {
+    margin-left: 40px; }
 
 #content .experiences {
   background-color: #F3F1F3;
@@ -246,7 +265,7 @@ img {
       z-index: -1;
       width: 1px;
       height: 100%;
-      background-color: #969696; }
+      background-color: #4A4A4A; }
     #content .experiences .area .experience {
       position: relative;
       margin-bottom: 40px; }
@@ -256,7 +275,7 @@ img {
         top: 13px;
         left: calc(50% - 50px - 1px - 20px);
         transform: translateX(-50%);
-        color: #969696;
+        color: #4A4A4A;
         font-size: 14px; }
         #content .experiences .area .experience time:after {
           content: '-';
@@ -348,7 +367,7 @@ img {
 
 #footer {
   padding: 50px 0;
-  background-color: #969696; }
+  background-color: #4A4A4A; }
   #footer p {
     margin: 0;
     text-align: center; }

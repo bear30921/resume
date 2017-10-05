@@ -4,13 +4,13 @@ $green:  #7AD8B8
 $green-lake: #8DD4D4
 $white-light: #F3F1F3
 $white: white
-$black: black
-$black-light: #969696
+$black: #4A4A4A
+$green-light: #81CCCF
 
 
 
 // 功能顏色變數
-$border-color: $black-light
+$border-color: $black
 
 $cover-word-color: $white
 
@@ -24,18 +24,15 @@ $about-media-word-color: $white
 
 $educations-list-li-border-color: $green
 
-$skills-col4-1-bg-color: $green-lake
-$skills-col4-2-bg-color: $skin
-$skills-col4-3-bg-color: $green
 $skills-col4-mark-bg-color: $white-light
 $skills-col4-border-color: $white
 
 $experiences-bg-color: $white-light
 $experiences-needle-bg-color: $green
 $experiences-needle-word-color: $white
-$experiences-needle-word2-color: $black-light
+$experiences-needle-word2-color: $black
 
-$footer-bg-color: $black-light
+$footer-bg-color: $black
 $footer-word-color: $white
 
 $top-bg-color: $green-lake
@@ -43,6 +40,13 @@ $top-bg-color: $green-lake
 
 
 // mixin
+@mixin bg-color
+  background: rgb(6,176,196); /* Old Browsers */
+  background: -webkit-linear-gradient(top left,rgba(6,176,196, 0.7),rgba(199,255,226, 0.7)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(top left,rgba(6,176,196, 0.7),rgba(199,255,226, 0.7)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(top left,rgba(6,176,196, 0.7),rgba(199,255,226, 0.7)); /*Fx 3.6-15*/
+  background: linear-gradient(top left, rgba(6,176,196, 0.7), rgba(199,255,226, 0.7)); /*Standard*/
+
 @mixin absolute-center
   position: absolute
   top: 50%
@@ -75,6 +79,7 @@ body
   
 h1, h2, h3, h4, h5, h6
   margin: 0
+  font-weight: 400
 
 h2
   margin-bottom: 50px
@@ -142,7 +147,7 @@ img
   width: 100%
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
   transition: all .4s
-
+  background-color: $green-light
 #header.active:after
   content: ''
   display: block
@@ -154,19 +159,30 @@ img
 
 // header
 #header
+  // +bg-color
+  background-image: url(../img/computer2.jpg)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: 50% 30%
+  position: relative
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    +bg-color    
+  
   .side-bar
     display: none
   .cover
     padding: 180px 0
     text-align: center
-    background: rgba(166,220,222,1)
-    background: -moz-linear-gradient(left, rgba(166,220,222,1) 0%, rgba(214,234,235,1) 100%)
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(166,220,222,1)), color-stop(100%, rgba(214,234,235,1)))
-    background: -webkit-linear-gradient(left, rgba(166,220,222,1) 0%, rgba(214,234,235,1) 100%)
-    background: -o-linear-gradient(left, rgba(166,220,222,1) 0%, rgba(214,234,235,1) 100%)
-    background: -ms-linear-gradient(left, rgba(166,220,222,1) 0%, rgba(214,234,235,1) 100%)
-    background: linear-gradient(to right, rgba(166,220,222,1) 0%, rgba(214,234,235,1) 100%)
     color: $cover-word-color
+    position: relative
+    z-index: 3
     .info
       display: inline-block
       h1
@@ -175,13 +191,14 @@ img
         
   .nav
     text-align: center
-    background-color: $nav-bg-color
     font-size: 0
+    position: relative
+    z-index: 3
     ul
       display: inline-block
       vertical-align: top
       li:hover
-        background-color: $nav-li-hover-bg-color          
+        background-color: white         
       a
         display: inline-block
         padding: 20px 50px
@@ -228,7 +245,6 @@ img
 
 
   .educations
-    background-color: $white-light
     h2
       text-align: center
     .list
@@ -249,15 +265,18 @@ img
 
 
   .skills
+    +bg-color
     h2
       text-align: center
       margin-bottom: 100px
+      color: white
     .row
       .col-4
         width: calc((100% - 80px) / 3)
         border-radius: 4px
         position: relative
-        // box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+        border: 1px solid white
+        color: $black
         &:after
           content: ''
           display: block
@@ -273,38 +292,33 @@ img
           opacity: 0
           // background-color: black
           transition: all .4s
-          border: 10px solid $skills-col4-border-color
+          border: 1px solid $skills-col4-border-color
         &:hover
           &:after
             opacity: 1
       .mark
         position: relative
         z-index: 1
-        width: 100px
-        height: 100px
+        width: 80px
+        height: 80px
         margin: 0 auto
         border-radius: 50%
         background-color: $skills-col4-mark-bg-color
         margin-top: -50px
-        font-size: 3em
+        font-size: 2.8em
         text-align: center
-        line-height: 100px
+        line-height: 80px
       ul, h3
         padding: 20px 40px 20px 40px
       li
         float: none
-        border-bottom: 1px solid $border-color
+        border-bottom: 1px solid white
         margin-bottom: 20px
         line-height: 2
         
     .col-4 + .col-4
       margin-left: 40px
-    .col-4:first-child
-      background-color: $skills-col4-1-bg-color
-    .col-4:nth-child(2)
-      background-color: $skills-col4-2-bg-color
-    .col-4:last-child
-      background-color: $skills-col4-3-bg-color
+    
   
 
   .experiences
