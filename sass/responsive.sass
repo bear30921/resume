@@ -1,10 +1,9 @@
-$skin: #F8F6D3
 $green:  #7AD8B8
-$green-lake: #8DD4D4
+$green-lake: #85CED0
+$black-light: #4A4A4A
 $white-light: #F3F1F3
 $white: white
-$black: black
-$black-light: #969696
+
 
 
 
@@ -15,7 +14,7 @@ $cover-word-color: $white
 
 $nav-bg-color: $green
 $nav-word-color: $white
-$nav-word-hover-word-color: $black
+$nav-word-hover-word-color: $black-light
 $nav-li-hover-bg-color: $white-light
 
 $about-media-word-bg-color: $green-lake
@@ -24,7 +23,6 @@ $about-media-word-color: $white
 $educations-list-li-border-color: $green
 
 $skills-col4-1-bg-color: $green-lake
-$skills-col4-2-bg-color: $skin
 $skills-col4-3-bg-color: $green
 $skills-col4-mark-bg-color: $white-light
 $skills-col4-border-color: $white
@@ -35,16 +33,23 @@ $experiences-needle-word-color: $white
 $experiences-needle-word2-color: $black-light
 $experiences-line-bg-color: $white-light
 
-$footer-bg-color: $skin
 
 $top-bg-color: $green-lake
 
 //平板、手機 變數
-$sideBar-bg-color: $green
-$sideBar-menu-bg-color: $green
+$sideBar-bg-color: #85CED0
+$sideBar-menu-bg-color: #85CED0
 $sideBar-menu-hamburger-color: $white
 
 // mixin
+
+@mixin bg-color
+  background: rgba(6, 176, 196, 0.7); /* Old Browsers */
+  background: -webkit-linear-gradient(left,rgb(6, 176, 196),rgb(199, 255, 226)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(left,rgb(6, 176, 196),rgb(199, 255, 226)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(left,rgb(6, 176, 196),rgb(199, 255, 226)); /*Fx 3.6-15*/
+  background: linear-gradient(to right, rgb(6, 176, 196), rgb(199, 255, 226)); /*Standard*/
+
 @mixin absolute-center
   position: absolute
   top: 50%
@@ -145,14 +150,14 @@ $sideBar-menu-hamburger-color: $white
           background-color: $sideBar-menu-hamburger-color
         
       .menu-list
+        +bg-color
         display: none
         position: fixed
         top: 0
         left: 0
-        z-index: 501px
+        z-index: 501
         width: 100%
         height: 100%
-        background-color: $skin
         transition: all .4s
         ul
           +absolute-center
@@ -160,11 +165,27 @@ $sideBar-menu-hamburger-color: $white
           font-size: 16px
           li
             float: none
+            &:after
+              content: ''
+              display: block
+              position: relative
+              left: 50%
+              transform: translateX(-50%)
+              width: 0
+              height: 3px
+              background-color: white
+              transition: all .4s
             a
               display: inline-block
               padding: 20px 50px
               font-size: 32px
               letter-spacing: 2px
+              color: white
+          li:hover:after
+            width: 100%
+
+              
+                
       
     .nav
       display: none

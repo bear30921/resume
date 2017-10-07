@@ -1,6 +1,6 @@
 $(function () {
 
-
+  // 啟動skrollr
   function enableSkrollr(str) {
     if (str == 'active') {
       var s = skrollr.init();
@@ -10,9 +10,13 @@ $(function () {
     }
   }
 
-  enableSkrollr('active');
+  if ($(window).width() >= 768) {
+    enableSkrollr('active');
+  } else {
+    enableSkrollr();
+  }
 
-  // 固定選單
+  // 固定電腦版、 平板選單
   $(window).on('scroll', function () {
     var $scroll = $(window).scrollTop();
     if ($scroll >= 478) {
@@ -24,7 +28,7 @@ $(function () {
     }
   });
 
-
+  //  固定手機版選單
   $(window).on('scroll', function () {
     var $scroll = $(window).scrollTop();
     if ($scroll > 0) {
@@ -35,9 +39,8 @@ $(function () {
   });
 
 
-  // 不分尺寸，都可以使用 --------------------------
 
-
+  //  依照瀏覽器視窗大小，判斷是否該啟用skrollr
   $(window).on('resize', function () {
     if ($(window).width() <= 767) {
       enableSkrollr();
