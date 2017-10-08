@@ -165,15 +165,22 @@ $sideBar-menu-hamburger-color: $white
           font-size: 16px
           li
             float: none
+            position: relative
             &:after
               content: ''
               display: block
-              position: relative
-              left: 50%
-              transform: translateX(-50%)
+              position: absolute
+              z-index: -1
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
               width: 0
-              height: 3px
-              background-color: white
+              width: 0
+              height: 0
+              opacity: 0
+              // background-color: rgba($white, 0.8)
+              border: 0px solid white
               transition: all .4s
             a
               display: inline-block
@@ -182,7 +189,12 @@ $sideBar-menu-hamburger-color: $white
               letter-spacing: 2px
               color: white
           li:hover:after
+            border: 1px solid white
             width: 100%
+            height: 100%
+            top: auto
+            left: auto
+            opacity: 1
 
               
                 

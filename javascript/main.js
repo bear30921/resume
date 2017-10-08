@@ -75,6 +75,22 @@ $(function () {
     $('.menu-list').toggleClass('active');
   });
 
+  // 照片燈箱
+  $('.experience img').on('click', function () {
+    var img = $(this).attr('src');
+    var lightBox = $('#full-photo').find('img');
+    $(lightBox).attr('src', img);
+    $('#full-photo').fadeIn(300);
+    $('html').addClass('stop-scrolling');
+
+  });
+
+  $('.cancel').on('click', function () {
+    $('#full-photo').fadeOut(300);
+    $('html').removeClass('stop-scrolling');
+  });
+
+  
 
 
 
