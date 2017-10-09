@@ -38,11 +38,11 @@ $top-bg-color: $green-lake
 
 // mixin
 @mixin bg-color
-  background: rgba(6, 176, 196, 0.7); /* Old Browsers */
-  background: -webkit-linear-gradient(left,rgba(6, 176, 196, 0.7),rgba(199, 255, 226, 0.7)); /*Safari 5.1-6*/
-  background: -o-linear-gradient(left,rgba(6, 176, 196, 0.7),rgba(199, 255, 226, 0.7)); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(left,rgba(6, 176, 196, 0.7),rgba(199, 255, 226, 0.7)); /*Fx 3.6-15*/
-  background: linear-gradient(to right, rgba(6, 176, 196, 0.7), rgba(199, 255, 226, 0.7)); /*Standard*/
+  background: rgba(6, 176, 196, 0.7) /* Old Browsers */
+  background: -webkit-linear-gradient(left,rgba(6, 176, 196, 0.7),rgba(199, 255, 226, 0.7)) /*Safari 5.1-6*/
+  background: -o-linear-gradient(left,rgba(6, 176, 196, 0.7),rgba(199, 255, 226, 0.7)) /*Opera 11.1-12*/
+  background: -moz-linear-gradient(left,rgba(6, 176, 196, 0.7),rgba(199, 255, 226, 0.7)) /*Fx 3.6-15*/
+  background: linear-gradient(to right, rgba(6, 176, 196, 0.7), rgba(199, 255, 226, 0.7)) /*Standard*/
 
 
 
@@ -138,8 +138,8 @@ img
   clear: both
 
 .stop-scrolling 
-  height: 100%;
-  overflow-y: hidden;
+  height: 100%
+  overflow-y: hidden
 
 
 
@@ -202,13 +202,32 @@ img
     z-index: 3
     .info
       display: inline-block
-      .text
-
-      
-        
+      border-top: 1px solid white
+      border-bottom: 1px solid white
+      padding: 50px 0
       h1
         padding: 10px 0
         font-size: 3.5em
+        border-right: 5px solid $green
+        max-width: 442px
+        margin: 0 auto
+        // display: inline-block
+        letter-spacing: 4px
+        white-space: nowrap
+        overflow: hidden
+        animation: typing 6s steps(20, end) infinite, blink-caret .8s step-end infinite
+        @keyframes typing  
+          0%  
+            max-width: 0 
+          50% 
+            max-width: 442px
+        
+        @keyframes blink-caret  
+          50%
+            border-color: transparent
+      p
+        padding-top: 20px
+         
         
   .nav
     text-align: center
@@ -301,6 +320,7 @@ img
         position: relative
         padding: 40px 0 
         overflow: hidden
+        height: 465px
         &:first-child
           background-position: center center
           background-image: url(../img/code.jpg)
@@ -539,6 +559,7 @@ img
   bottom: 12px
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
   transition: all 1s
+  z-index: 9999
 
 #full-photo
   display: none
@@ -563,7 +584,7 @@ img
         +absolute-center
         height: auto
         width: 100%
-        min-width: 800px
+        // min-width: 800px
         
     .cancel
       position: absolute

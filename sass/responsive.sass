@@ -227,6 +227,7 @@ $sideBar-menu-hamburger-color: $white
           width: 100%
           margin-left: 0
           text-align: center
+          height: auto
           &:nth-child(1), &:nth-child(2)
             margin-bottom: 90px
     
@@ -268,6 +269,16 @@ $sideBar-menu-hamburger-color: $white
 
 
 @media screen and (max-width: 575px)
+  #header
+    .cover
+      .info
+        h1
+          border-right: none
+          animation: none
+          white-space: normal
+        
+
+
   #content
     .experiences
     
@@ -315,6 +326,16 @@ $sideBar-menu-hamburger-color: $white
               right: auto
               padding: 0
             
+
+
+
+@media screen and (max-width: 501px)
+  #full-photo
+    .container
+      .box
+        height: 400px
+
+
 
 *, *:before, *:after
 
