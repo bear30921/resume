@@ -12,11 +12,10 @@ $border-color: $black-light
 
 $cover-word-color: $white
 
-$nav-bg-color: $green
 $nav-word-color: $white
 $nav-word-hover-word-color: $black-light
 
-$about-media-word-bg-color: $green-lake
+$about-media-word-bg-color: $green
 $about-media-word-color: $white
 
 $educations-list-li-border-color: $black-light
@@ -87,9 +86,13 @@ h2
 h3
   font-size: 22px
 
+h4
+  font-size: 16px
+
 p
   margin-top: 0
   letter-spacing: 1px
+  line-height: 2
 
 a
   text-decoration: none
@@ -206,6 +209,7 @@ img
       border-bottom: 1px solid white
       padding: 50px 0
       h1
+        
         padding: 10px 0
         font-size: 3.5em
         border-right: 5px solid $green
@@ -227,6 +231,9 @@ img
             border-color: transparent
       p
         padding-top: 20px
+        color: $black-light
+        
+
          
         
   .nav
@@ -265,6 +272,9 @@ img
         height: auto
         border-radius: 50%
     .col-7
+      p
+        line-height: 2
+        text-align: justify
       .media
         padding-top: 40px
         ul
@@ -489,12 +499,31 @@ img
             border-color: transparent white transparent transparent
             
           .col-5
+            text-align: center
+            &:after
+              content: '🔍 點擊圖片放大'
+              display: block
+              margin-top: 20px
             img
               width: 100%
               height: auto
               cursor: pointer
           .col-7
             padding-left: 20px
+            line-height: 2
+            text-align: justify
+            h4
+              font-weight: 500
+            ul
+              // margin-top: 10px
+              li
+                float: none
+                font-size: 14px
+                &:last-child
+                  text-align: right
+                  margin-top: 50px
+                  letter-spacing: 2px
+
         &:nth-child(2n) .row:before
           left: auto
           right: -15px
@@ -509,13 +538,31 @@ img
     .row
       margin-bottom: 40px
       .col-5
-        a
-          display: block
-          img
-            width: 100%
-            height: auto
+        img
+          width: 100%
+          height: auto
       .col-7
         padding-left: 40px
+        margin-bottom: 40px
+        h3
+          margin-bottom: 20px
+        p
+          text-align: justify
+        ul
+          padding-top: 10px
+          li
+            float: right
+            &:first-child
+              padding-left: 10px
+            a
+              display: inline-block
+              padding: 10px 14px
+              transition: all .4s
+              background-color: $green
+              color: white
+              &:hover
+                border-radius: 30px
+                
       &:last-child
         .col-5
           position: relative
@@ -525,13 +572,24 @@ img
           right: 41.66667%
           padding-left: 0
           padding-right: 40px
+          margin-bottom: 0
+          ul
+            li
+              float: left
+              &:first-child
+                padding-left: 0
+                padding-right: 10px
+*
+  // border: 1px solid black
 
   .autobiography
     border-top: 1px solid #C1C3C7
     h2
       text-align: center    
     p
-      line-height: 1.8
+      line-height: 2
+      text-align: justify
+
 
 
 

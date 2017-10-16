@@ -19,7 +19,7 @@ $(function () {
   // 固定電腦版、 平板選單
   $(window).on('scroll', function () {
     var $scroll = $(window).scrollTop();
-    if ($scroll >= 478) {
+    if ($scroll >= 600) {
       $('.nav').addClass('active');
       $('#header').addClass('active');
     } else {
@@ -51,7 +51,7 @@ $(function () {
   //  top按鈕動畫
   $(window).on('scroll', function () {
     var $scroll = $(window).scrollTop();
-    if ($scroll >= 478) {
+    if ($scroll >= 600) {
       $('#top').addClass('active');
     } else {
       $('#top').removeClass('active');

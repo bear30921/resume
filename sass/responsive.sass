@@ -261,6 +261,28 @@ $sideBar-menu-hamburger-color: $white
             border-color: transparent white transparent transparent
           &:nth-child(2n+1) .row
             float: none
+
+    .projects
+      .row
+        .col-5
+          margin-bottom: 20px
+        &:nth-child(n)
+          .col-5
+            width: 100%
+            left: auto
+          .col-7
+            margin-top: 20px
+            width: 100%
+            right: auto
+            padding: 0
+            ul
+              li
+                float: right
+                &:first-child
+                  padding-left: 10px
+                  padding-right: 0px
+
+    
             
 
 
@@ -313,18 +335,7 @@ $sideBar-menu-hamburger-color: $white
             z-index: 10
             &:before
               display: none
-    .projects
-        .row
-          .col-5
-            margin-bottom: 20px
-          &:nth-child(n)
-            .col-5
-              width: 100%
-              left: auto
-            .col-7
-              width: 100%
-              right: auto
-              padding: 0
+    
             
 
 
