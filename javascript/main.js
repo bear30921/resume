@@ -86,6 +86,7 @@ $(function () {
 
   // 照片燈箱
   $('.experience img').on('click', function () {
+    $('#full-photo').find('img').attr('src', '');
     var img = $(this).attr('src');
     var lightBox = $('#full-photo').find('img');
     $(lightBox).attr('src', img);

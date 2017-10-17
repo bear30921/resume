@@ -356,7 +356,8 @@ img {
           #content .experiences .area .experience .row .col-5:after {
             content: '🔍 點擊圖片放大';
             display: block;
-            margin-top: 20px; }
+            margin-top: 20px;
+            margin-bottom: 40px; }
           #content .experiences .area .experience .row .col-5 img {
             width: 100%;
             height: auto;
