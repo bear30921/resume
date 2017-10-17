@@ -219,7 +219,11 @@
       left: auto;
       z-index: 10; }
       #content .experiences .area .experience .row:before {
-        display: none; } }
+        display: none; }
+      #content .experiences .area .experience .row .col-5 {
+        width: 100%; }
+      #content .experiences .area .experience .row .col-7 {
+        width: 100%; } }
 
 @media screen and (max-width: 501px) {
   #full-photo .container .box {

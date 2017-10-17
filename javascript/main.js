@@ -69,6 +69,15 @@ $(function () {
     $('.menu-list').removeClass('active');
   });
 
+  // 返回網頁最上層
+  $('#top').on('click', function (e) {
+    e.preventDefault();
+    $('html, body').stop().animate({
+      scrollTop: 0
+    }, 1000);
+  });
+
+
   // 手機板選單切換
   $('.menu').on('click', function () {
     $(this).toggleClass('active');
@@ -85,12 +94,13 @@ $(function () {
 
   });
 
+  // 關閉照片燈箱
   $('.cancel').on('click', function () {
     $('#full-photo').fadeOut(300);
     $('html').removeClass('stop-scrolling');
   });
 
-  
+
 
 
 
